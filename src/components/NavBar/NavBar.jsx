@@ -28,7 +28,7 @@ const NavBar = () => {
                 <ul className=' flex justify-between gap-3 items-center'>
 
                     {
-                        navItems.map((item) => <MyNavLink to={item.path}>{item.text}</MyNavLink>)
+                        navItems.map((item, index) => <MyNavLink key={index} to={item.path}>{item.text}</MyNavLink>)
                     }
                     {/* <li>
                         <MyNavLink to={"/"}>Home</MyNavLink>

@@ -3,7 +3,9 @@ import Banner from '../../components/Banner/Banner';
 import Stats from '../../components/Stats/Stats';
 import TrendingApps from '../../components/TrendingApps/TrendingApps';
 
+
 const HomePage = () => {
+
     return (
         <>
            <Banner/>
