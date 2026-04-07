@@ -3,11 +3,11 @@ import { FaDownload, FaRegStar } from 'react-icons/fa6';
 
 const AppCart = ({app}) => {
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+        <div className="card bg-base-100 shadow-sm">
                         <figure>
                             <img
                                 src={app.image}
-                                alt={app.title} />
+                                alt={app.title} className=' h-[200px] w-auto' />
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">{app.title}</h2>
