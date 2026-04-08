@@ -18,10 +18,8 @@ const UseAppHook = () => {
         };
         fetchData();
     }, []);
-    return ( 
-
-        {apps, loading}
-    );
+    return  {apps, loading};
+    
 };
 
 export default UseAppHook;
