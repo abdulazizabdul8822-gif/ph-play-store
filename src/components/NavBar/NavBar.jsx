@@ -18,6 +18,10 @@ const NavBar = () => {
                 path: "/installedApps",
                 text: "Installation",
             },
+            {
+                path: "/dashboard",
+                text: "Dashboard",
+            },
         ];
     
 
