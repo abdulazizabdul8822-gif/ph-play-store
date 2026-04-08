@@ -1,13 +1,18 @@
+import { useState } from "react";
 import { InstallAppsContext } from "./InstallAppsContest";
 
-const InstalledAppsProvider = ({children}) => {
+const InstalledAppsProvider = ({ children }) => {
+
+    const [installedApps, setInstalledApps] = useState([]);
 
     const data = {
-        name: "aziz",
-        age: 19,
-    }
+        installedApps,
+        setInstalledApps
+    };
     return (
-        <InstallAppsContext.Provider value={data}>{children}</InstallAppsContext.Provider>
+        <InstallAppsContext.Provider value={data}>
+            {children}
+        </InstallAppsContext.Provider>
     );
 };
 

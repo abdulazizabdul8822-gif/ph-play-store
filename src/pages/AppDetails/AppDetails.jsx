@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, } from 'react';
 import { useParams } from 'react-router';
 import UseAppHook from '../../Hooks/UseAppHook/UseAppHook';
 import { RingLoader } from 'react-spinners';
+import { InstallAppsContext } from '../../context/InstallAppsContest';
+import { toast } from 'react-toastify';
 
 const AppDetails = () => {
     const { id } = useParams();
 
     const { apps, loading } = UseAppHook();
 
-    const [installedApps, setInstalledApps] = useState([]);
+    const {installedApps, setInstalledApps} = useContext(InstallAppsContext);
 
     
     if (loading) {
@@ -29,6 +31,7 @@ const AppDetails = () => {
 
     const handleInstallApp = () => {
         setInstalledApps([...installedApps, expectedApp]);
+        toast.success(`${expectedApp.title} is installed!`)
     }
     console.log(installedApps)
     
